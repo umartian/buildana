@@ -119,38 +119,65 @@
 
 <section id="main-container" class="main-container">
   <div class="container">
-
     <div class="row">
       <div class="col-lg-8">
-        <div id="page-slider" class="page-slider small-bg">
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
+        <div class="row g-3">
+          <!-- Gallery Item 1 -->
+          <div class="col-6 col-md-4">
+            <div class="gallery-item">
+              <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" data-src="images/projects/crest/test/final-test.jpg">
+            </div>
           </div>
-
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
+          <!-- Gallery Item 2 -->
+          <div class="col-6 col-md-4">
+            <div class="gallery-item">
+              <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" data-src="images/projects/crest/test/final-test2.jpg">
+            </div>
           </div>
-        </div><!-- Page slider end -->
-      </div><!-- Slider col end -->
+          <!-- Add More Items as Needed -->
+        </div><!-- Row for Gallery End -->
+      </div><!-- Gallery Column End -->
 
       <div class="col-lg-4 mt-5 mt-lg-0">
-
-        <h3 class="column-title mrt-0">Ameena Manzil</h3>
-        
+        <h3 class="column-title mrt-0">Crest Composite</h3>
         <ul class="project-info list-unstyled">
           <li>
-            <p class="project-info-label">Area:</p>
-            <p class="project-info-content">1200 sq.ft (30x40)</p>
+            <p class="project-info-label">Industrial Shed:</p>
+            <p class="project-info-content">22,000 sq. ft</p>
           </li>
-          
+          <li>
+            <p class="project-info-label">Water Tank Construction</p>
+            <p class="project-info-content">5 lakh liters capacity</p>
+          </li>
+          <li>
+            <p class="project-info-label">Labour Shed</p>
+            <p class="project-info-content">2,200 sq. ft</p>
+          </li>
+          <li>
+            <p class="project-info-label">Machinery Foundation</p>
+            <p class="project-info-content">1,600 sq. ft</p>
+          </li>
         </ul>
-
       </div><!-- Content col end -->
 
     </div><!-- Row end -->
-
-  </div><!-- Conatiner end -->
+  </div><!-- Container end -->
 </section><!-- Main container end -->
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img id="modalImage" src="" alt="Full-size image" class="img-fluid">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="closeModalButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <section id="main-container" class="main-container">
   <div class="container">
@@ -170,12 +197,12 @@
 
       <div class="col-lg-4 mt-5 mt-lg-0">
 
-        <h3 class="column-title mrt-0">Tarade Hostel</h3>
+        <h3 class="column-title mrt-0">Jay Instruments and systems (JISL)</h3>
         
         <ul class="project-info list-unstyled">
           <li>
-            <p class="project-info-label">Area:</p>
-            <p class="project-info-content">2,100 Sq.ft (70x30)</p>
+            <p class="project-info-label">STP work</p>
+            <p class="project-info-content">(Sewage treatment plant)</p>
           </li>
         </ul>
 
@@ -205,48 +232,16 @@
 
       <div class="col-lg-4 mt-5 mt-lg-0">
 
-        <h3 class="column-title mrt-0">Darudwale Manzil</h3>
+        <h3 class="column-title mrt-0">Klauz Specialities (Tie up project with afza Edifice)</h3>
         
         <ul class="project-info list-unstyled">
           <li>
             <p class="project-info-label">Area:</p>
-            <p class="project-info-content">1950 Sq.ft</p>
+            <p class="project-info-content">22,000 sq. ft</p>
           </li>
-         
-         
-        </ul>
-
-      </div><!-- Content col end -->
-
-    </div><!-- Row end -->
-
-  </div><!-- Conatiner end -->
-</section><!-- Main container end -->
-
-<section id="main-container" class="main-container">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-lg-8">
-        <div id="page-slider" class="page-slider small-bg">
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
-          </div>
-
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
-          </div>
-        </div><!-- Page slider end -->
-      </div><!-- Slider col end -->
-
-      <div class="col-lg-4 mt-5 mt-lg-0">
-
-        <h3 class="column-title mrt-0">Ayeesha's Manzil</h3>
-        
-        <ul class="project-info list-unstyled">
           <li>
-            <p class="project-info-label">Size:</p>
-            <p class="project-info-content">1,200sqft (30x40)</p>
+            <p class="project-info-label">Location</p>
+            <p class="project-info-content">Doddaballapura industrial area, Bangalore</p>
           </li>
          
         </ul>
@@ -258,6 +253,84 @@
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 
+<section id="main-container" class="main-container"></section>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div id="page-slider" class="page-slider small-bg">
+          <div class="item">
+            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
+          </div>
+
+          <div class="item">
+            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
+          </div>
+        </div><!-- Page slider end -->
+      </div><!-- Slider col end -->
+
+      <div class="col-lg-4 mt-5 mt-lg-0">
+
+        <h3 class="column-title mrt-0">Hitachi Energy (Tie up project with afza edifice)</h3>
+        
+        <ul class="project-info list-unstyled">
+          <li>
+            <p class="project-info-label">Industrial shed With office Block</p>
+            <p class="project-info-content">1,12,000 Sq.ft</p>
+          </li>
+          <li>
+            <p class="project-info-label">Location</p>
+            <p class="project-info-content">Doddaballapura industrial area, Bangalore</p>
+          </li>
+         
+        </ul>
+
+      </div><!-- Content col end -->
+
+    </div><!-- Row end -->
+
+  </div><!-- Conatiner end -->
+</section><!-- Main container end -->
+
+
+<section id="main-container" class="main-container"></section>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-8">
+        <div id="page-slider" class="page-slider small-bg">
+          <div class="item">
+            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
+          </div>
+
+          <div class="item">
+            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
+          </div>
+        </div><!-- Page slider end -->
+      </div><!-- Slider col end -->
+
+      <div class="col-lg-4 mt-5 mt-lg-0">
+
+        <h3 class="column-title mrt-0">2L ENGINEERS, Rayapur</h3>
+        
+        <ul class="project-info list-unstyled">
+          <li>
+            <p class="project-info-label">Industrial Shed</p>
+            <p class="project-info-content">18,000 sq.ft </p>
+          </li>
+          <li>
+            <p class="project-info-label">office block</p>
+            <p class="project-info-content">3600 sq.ft </p>
+          </li>
+        </ul>
+
+      </div><!-- Content col end -->
+
+    </div><!-- Row end -->
+
+  </div><!-- Conatiner end -->
+</section><!-- Main container end -->
+
 
 <section id="main-container" class="main-container">
   <div class="container">
@@ -277,12 +350,12 @@
 
       <div class="col-lg-4 mt-5 mt-lg-0">
 
-        <h3 class="column-title mrt-0">Sachin's residence</h3>
+        <h3 class="column-title mrt-0">OM SAI STEEL, Hosur</h3>
         
         <ul class="project-info list-unstyled">
           <li>
-            <p class="project-info-label"> Sachin’s residence </p>
-            <p class="project-info-content">700 Sq.ft (35x20)</p>
+            <p class="project-info-label">Size</p>
+            <p class="project-info-content">6,200 sq.ft office Block</p>
           </li>
         </ul>
 
@@ -293,7 +366,44 @@
   </div><!-- Conatiner end -->
 </section><!-- Main container end -->
 
+<section id="main-container" class="main-container"></section>
+  <div class="container">
 
+    <div class="row">
+      <div class="col-lg-8">
+        <div id="page-slider" class="page-slider small-bg">
+          <div class="item">
+            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
+          </div>
+
+          <div class="item">
+            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
+          </div>
+        </div><!-- Page slider end -->
+      </div><!-- Slider col end -->
+
+      <div class="col-lg-4 mt-5 mt-lg-0">
+
+        <h3 class="column-title mrt-0">Miven automation</h3>
+        
+        <ul class="project-info list-unstyled">
+          <li>
+            <p class="project-info-label">Industrial Shed </p>
+            <p class="project-info-content">32,000 sq.ft</p>
+          </li>
+
+          <li></li>
+            <p class="project-info-label">Mezzanine Floor for office Block </p>
+            <p class="project-info-content">10,000 sq.ft</p>
+          </li>
+        </ul>
+
+      </div><!-- Content col end -->
+
+    </div><!-- Row end -->
+
+  </div><!-- Conatiner end -->
+</section><!-- Main container end -->
 
 
 
@@ -353,7 +463,7 @@
           </div>
         </div>
 
-        
+       
       </div><!-- Row end -->
 
       <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
@@ -370,6 +480,29 @@
 
   <!-- Javascript Files
   ================================================== -->
+
+  <script>
+    // JavaScript to handle modal image display
+    document.addEventListener('DOMContentLoaded', function () {
+      const modalImage = document.getElementById('modalImage');
+      const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+      const closeButton = document.getElementById('closeModalButton');
+  
+      // Attach click event to all gallery images
+      document.querySelectorAll('.gallery-item img').forEach(image => {
+        image.addEventListener('click', function () {
+          const imageSrc = this.getAttribute('data-src'); // Get the data-src attribute
+          modalImage.src = imageSrc; // Update the modal's image source
+          imageModal.show(); // Show the modal
+        });
+      });
+  
+      // Manual close button handler
+      closeButton.addEventListener('click', function () {
+        imageModal.hide(); // Hide the modal when close button is clicked
+      });
+    });
+  </script>
 
   <!-- initialize jQuery Library -->
   <script src="plugins/jQuery/jquery.min.js"></script>
@@ -391,6 +524,7 @@
 
   <!-- Template custom -->
   <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 
   </div><!-- Body inner end -->
   </body>

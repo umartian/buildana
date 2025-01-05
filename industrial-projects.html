@@ -7,6 +7,74 @@
   <meta charset="utf-8">
   <title>Buildana Engineers</title>
 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .gallery img {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery img {
+        height: 150px;
+      }
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal img {
+      display: block;
+      margin: auto;
+      max-width: 90%;
+      max-height: 80%;
+      margin-top: 5%;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      background: red;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+  </style>
+
   <!-- Mobile Specific Metas
 ================================================== -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -119,24 +187,10 @@
 
 <section id="main-container" class="main-container">
   <div class="container">
-
     <div class="row">
-      <div class="col-lg-8">
-        <div id="page-slider" class="page-slider small-bg">
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
-          </div>
-
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
-          </div>
-        </div><!-- Page slider end -->
-      </div><!-- Slider col end -->
 
       <div class="col-lg-4 mt-5 mt-lg-0">
-
         <h3 class="column-title mrt-0">Crest Composite</h3>
-        
         <ul class="project-info list-unstyled">
           <li>
             <p class="project-info-label">Industrial Shed:</p>
@@ -155,29 +209,52 @@
             <p class="project-info-content">1,600 sq. ft</p>
           </li>
         </ul>
-
       </div><!-- Content col end -->
+      <div class="col-lg-8">
+       
+        <!-- <h1 style="text-align: center; margin: 20px 0;">Responsive Image Gallery</h1> -->
+  <div class="gallery">
+    <img src="images/projects/crest/1.jpg" alt="Image 1" onclick="openImage(this.src)" />
+    <img src="images/projects/crest/2.jpg" alt="Image 2" onclick="openImage(this.src)" />
+    <img src="images/projects/crest/3.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+    <img src="images/projects/crest/4.jpg" alt="Image 4" onclick="openImage(this.src)"/>
+    <img src="images/projects/crest/5.jpg" alt="Image 5" onclick="openImage(this.src)"/>
+    <img src="images/projects/crest/6.jpg" alt="Image 6" onclick="openImage(this.src)"/>
+  </div>
+
+  <div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImg" />
+  </div>
+
+      </div><!-- Gallery Column End -->
+
+     
 
     </div><!-- Row end -->
-
-  </div><!-- Conatiner end -->
+  </div><!-- Container end -->
 </section><!-- Main container end -->
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img id="modalImage" src="" alt="Full-size image" class="img-fluid">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" id="closeModalButton">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <section id="main-container" class="main-container">
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-8">
-        <div id="page-slider" class="page-slider small-bg">
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
-          </div>
-
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
-          </div>
-        </div><!-- Page slider end -->
-      </div><!-- Slider col end -->
+    
 
       <div class="col-lg-4 mt-5 mt-lg-0">
 
@@ -192,6 +269,19 @@
 
       </div><!-- Content col end -->
 
+      <div class="col-lg-8">
+        <div class="gallery">
+          <img src="images/projects/jay/1.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/jay/2.jpg" alt="Image 2" onclick="openImage(this.src)" />
+          <img src="images/projects/jay/3.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+          <img src="images/projects/jay/4.jpg" alt="Image 4" onclick="openImage(this.src)"/>
+          <img src="images/projects/jay/5.jpg" alt="Image 5" onclick="openImage(this.src)"/>
+          <img src="images/projects/jay/6.jpg" alt="Image 6" onclick="openImage(this.src)"/>
+        </div>
+
+        
+      </div><!-- Slider col end -->
+
     </div><!-- Row end -->
 
   </div><!-- Conatiner end -->
@@ -202,17 +292,7 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-8">
-        <div id="page-slider" class="page-slider small-bg">
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
-          </div>
-
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
-          </div>
-        </div><!-- Page slider end -->
-      </div><!-- Slider col end -->
+    
 
       <div class="col-lg-4 mt-5 mt-lg-0">
 
@@ -232,6 +312,16 @@
 
       </div><!-- Content col end -->
 
+      <div class="col-lg-8">
+        <div class="gallery">
+          <img src="images/projects/klauz/1.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/klauz/2.jpg" alt="Image 2" onclick="openImage(this.src)" />
+          <img src="images/projects/klauz/3.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+          <img src="images/projects/klauz/4.jpg" alt="Image 4" onclick="openImage(this.src)"/>
+         
+        </div>
+      </div><!-- Slider col end -->
+
     </div><!-- Row end -->
 
   </div><!-- Conatiner end -->
@@ -241,17 +331,7 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-8">
-        <div id="page-slider" class="page-slider small-bg">
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
-          </div>
-
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
-          </div>
-        </div><!-- Page slider end -->
-      </div><!-- Slider col end -->
+      
 
       <div class="col-lg-4 mt-5 mt-lg-0">
 
@@ -271,9 +351,27 @@
 
       </div><!-- Content col end -->
 
+      <div class="col-lg-8">
+        
+          <div class="gallery">
+            <img src="images/projects/hitachi/1.jpg" alt="Image 1" onclick="openImage(this.src)" />
+            <img src="images/projects/hitachi/2.jpg" alt="Image 2" onclick="openImage(this.src)" />
+            <img src="images/projects/hitachi/3.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+            <img src="images/projects/hitachi/4.jpg" alt="Image 4" onclick="openImage(this.src)"/>
+            <img src="images/projects/hitachi/5.jpg" alt="Image 1" onclick="openImage(this.src)" />
+            <img src="images/projects/hitachi/6.jpg" alt="Image 2" onclick="openImage(this.src)" />
+            <img src="images/projects/hitachi/7.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+            <img src="images/projects/hitachi/8.jpg" alt="Image 4" onclick="openImage(this.src)"/>
+            <img src="images/projects/hitachi/9.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+            <img src="images/projects/hitachi/10.jpg" alt="Image 4" onclick="openImage(this.src)"/>
+           
+          </div>
+        </div><!-- Slider col end -->
+      </div><!-- Slider col end -->
+
     </div><!-- Row end -->
 
-  </div><!-- Conatiner end -->
+ 
 </section><!-- Main container end -->
 
 
@@ -281,17 +379,7 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-8">
-        <div id="page-slider" class="page-slider small-bg">
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
-          </div>
-
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
-          </div>
-        </div><!-- Page slider end -->
-      </div><!-- Slider col end -->
+     
 
       <div class="col-lg-4 mt-5 mt-lg-0">
 
@@ -310,6 +398,19 @@
 
       </div><!-- Content col end -->
 
+      <div class="col-lg-8">
+        <div class="gallery">
+          <img src="images/projects/2l/1.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/2l/2.jpg" alt="Image 2" onclick="openImage(this.src)" />
+          <img src="images/projects/2l/3.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+          <img src="images/projects/2l/4.jpg" alt="Image 4" onclick="openImage(this.src)"/>
+          <img src="images/projects/2l/5.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/2l/6.jpg" alt="Image 2" onclick="openImage(this.src)" />
+          <img src="images/projects/2l/7.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+         
+        </div>
+      </div><!-- Slider col end -->
+
     </div><!-- Row end -->
 
   </div><!-- Conatiner end -->
@@ -320,17 +421,7 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-8">
-        <div id="page-slider" class="page-slider small-bg">
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
-          </div>
-
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
-          </div>
-        </div><!-- Page slider end -->
-      </div><!-- Slider col end -->
+      
 
       <div class="col-lg-4 mt-5 mt-lg-0">
 
@@ -345,6 +436,16 @@
 
       </div><!-- Content col end -->
 
+      <div class="col-lg-8">
+        <div class="gallery">
+          <img src="images/projects/om/1.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/om/2.jpg" alt="Image 2" onclick="openImage(this.src)" />
+          <img src="images/projects/om/3.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+        
+         
+        </div>
+      </div><!-- Slider col end -->
+
     </div><!-- Row end -->
 
   </div><!-- Conatiner end -->
@@ -354,17 +455,7 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-lg-8">
-        <div id="page-slider" class="page-slider small-bg">
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test.jpg" alt="project-image" />
-          </div>
-
-          <div class="item">
-            <img loading="lazy" class="img-fluid" src="images/projects/crest/test/final-test2.jpg" alt="project-image" />
-          </div>
-        </div><!-- Page slider end -->
-      </div><!-- Slider col end -->
+     
 
       <div class="col-lg-4 mt-5 mt-lg-0">
 
@@ -383,6 +474,56 @@
         </ul>
 
       </div><!-- Content col end -->
+
+      <div class="col-lg-8">
+        <div class="gallery">
+          <img src="images/projects/miven/1.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/miven/2.jpg" alt="Image 2" onclick="openImage(this.src)" />
+          <img src="images/projects/miven/3.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+          <img src="images/projects/miven/4.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/miven/5.jpg" alt="Image 2" onclick="openImage(this.src)" />
+          <img src="images/projects/miven/6.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+          <img src="images/projects/miven/7.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/miven/8.jpg" alt="Image 2" onclick="openImage(this.src)" />
+          <img src="images/projects/miven/9.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+          <img src="images/projects/miven/10.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+         
+        </div>
+      </div><!-- Slider col end -->
+
+    </div><!-- Row end -->
+
+  </div><!-- Conatiner end -->
+</section><!-- Main container end -->
+
+<section id="main-container" class="main-container">
+  <div class="container">
+
+    <div class="row">
+      
+
+      <div class="col-lg-4 mt-5 mt-lg-0">
+
+        <h3 class="column-title mrt-0">Miven Machine Tools</h3>
+        
+        <ul class="project-info list-unstyled">
+          <li>
+            <p class="project-info-label">Size</p>
+            <p class="project-info-content">9,000 Sq.ft VDF Flooring with Zip crane foundations</p>
+          </li>
+        </ul>
+
+      </div><!-- Content col end -->
+
+      <div class="col-lg-8">
+        <div class="gallery">
+          <img src="images/projects/miven-machine/1.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/miven-machine/2.jpg" alt="Image 2" onclick="openImage(this.src)" />
+          <img src="images/projects/miven-machine/3.jpg" alt="Image 3" onclick="openImage(this.src)"/>
+          <img src="images/projects/miven-machine/4.jpg" alt="Image 1" onclick="openImage(this.src)" />
+          <img src="images/projects/miven-machine/5.jpg" alt="Image 2" onclick="openImage(this.src)" />
+        </div>
+      </div><!-- Slider col end -->
 
     </div><!-- Row end -->
 
@@ -416,7 +557,7 @@
           <h3 class="widget-title">Working Hours</h3>
           <div class="working-hours">
             We work 7 days a week, every day excluding major holidays. Contact us if you have an emergency.
-            <br><br> Monday - Friday: <span class="text-right">10:00 - 18:00</span>
+            <br> Contact: <span class="text-center">+91 779 567 4869</span>
            
           </div>
         </div><!-- Col end -->
@@ -465,6 +606,19 @@
   <!-- Javascript Files
   ================================================== -->
 
+  <script>
+    function openImage(src) {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      document.getElementById("modal").style.display = "none";
+    }
+  </script>
+
   <!-- initialize jQuery Library -->
   <script src="plugins/jQuery/jquery.min.js"></script>
   <!-- Bootstrap jQuery -->
@@ -485,6 +639,7 @@
 
   <!-- Template custom -->
   <script src="js/script.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
 
   </div><!-- Body inner end -->
   </body>

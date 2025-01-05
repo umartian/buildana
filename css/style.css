@@ -3515,3 +3515,29 @@ label {
   object-fit: cover; /* Ensures the image covers the entire area */
   border-radius: 8px; /* Optional: add rounded corners */
 }
+
+
+.gallery-item img {
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  max-width: 100%;
+  height: auto;
+}
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.btn:focus, .btn:active, button:focus, button:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#image-gallery .modal-footer{
+  display: block;
+}
+
+.thumb{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
